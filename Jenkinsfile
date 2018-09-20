@@ -8,8 +8,8 @@ pipeline {
                 //sh 'git clone https://github.com/lnxlalith/base_java8.git'
                 //sh 'git clone https://github.com/lnxlalith/base_postgres.git'
                 //sh 'ansible-playbook artifactory-playbook/requirements.yml'
-                sh 'sudo ansible-galaxy install -r artifactory-playbook/requirements.yml'
-                sh 'sudo ansible-playbook -i artifactory-playbook/inventory artifactory-playbook/playbook.yml'
+                sh 'echo "Azureuser@1" | sudo ansible-galaxy install -r artifactory-playbook/requirements.yml'
+                sh 'echo "Azureuser@1" | sudo ansible-playbook -i artifactory-playbook/inventory artifactory-playbook/playbook.yml'
             }
         }
         stage('Test') {
