@@ -3,5 +3,6 @@
   become: true
   become_method: sudo
   become_user: root
+  ansible_ssh_password: Azureuser@1
   roles:
     - { role: jenkins }
